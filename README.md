@@ -3,15 +3,15 @@ Code project 0
 ![WireFrame](https://github.com/KingSri/blackJack_game/blob/master/images/Photos%20-%201%20of%202.png)
 ![Rules](https://github.com/KingSri/blackJack_game/blob/master/images/Photos%20-%202%20of%202.png)
 
-(Special thanks to Ajay Kumar, Seanny Drakon Phoenix and the teachers for helping me out.)
+#(Special thanks to Ajay Kumar, Seanny Drakon Phoenix and the teachers for helping me out.)
 
-User Story:
+#User Story:
 *As a new software engineering immersive student, I wanted to take the concepts that I had learned over the past three weeks and apply them into a project so that I could see what I could build and where I could make improvements.
 
-#How to access the game
+# How to access the game
 Users can download the game via zip file, or they can get it from the github repo.
 
-#Purpose and Thought Process:
+# Purpose and Thought Process:
 
 The purpose of this project is to design a blackjack game. Concepts used for the game are HTML, CSS, and Javascript.
 Javascript holds the bulk of the backend of the game. HTML displaeeys how the game looks on a webpage, and CSS helps it look visually appealing.
@@ -21,7 +21,7 @@ My thought process for this game was to first outline how I wanted the game to g
 I first started on betting button. I switched from this to an object with functions that  would build, shuffle, and deal a deck. I then finished the bet button, before working on stay, and hit me buttons and functions. Finally, I worked on winning conditions.
 
 
-#BlackJack Rules:
+# BlackJack Rules:
 
 The rules of BlackJack are relatively simple. Below are my modified rules to play this game.
 
@@ -38,7 +38,7 @@ The rules of BlackJack are relatively simple. Below are my modified rules to pla
 4. Losing Conditions:
   1.If the player goes over 21, they automatically lose the round
   2.If the dealer has a hand that is in between 17 and 21, and it is higher than the player's hand, the player loses the round
-  4.If the player's money drops to zero, they lose the game. They have no option but to hit the reset button.
+  3.If the player's money drops to zero, they lose the game. They have no option but to hit the reset button.
 5. Draw Condition
   1. If the player and dealer get the same value at the end of the round, they both draw. Player will get a quarter of what they bet.
 6. Player Actions:
