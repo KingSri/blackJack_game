@@ -11,6 +11,8 @@ header {
   background-color: black;
   padding: 5px 10px;
 }
+
+
 #title {
   text-align: center;
   color: white;
@@ -18,38 +20,52 @@ header {
   font-weight: 700;
   font-size: 45px
 }
-#buttonElements{
+
+}
+#button{
   font-family: 'Raleway', sans-serif;
-  /*background-color: #006400;*/
   margin: auto;
   text-align:
 }
 
+h5{
+  font-family: 'Spartan', sans-serif;
+}
+
 #playerInfo{
-  /*background-color: lightgrey;*/
-  background-color: green;
+  background-color: lightgrey;
+  opacity: 1;
+  background-size: contain;
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
   width: 100px;
   border: 15px black;
   padding: 100px;
-  margin: 20px;
   box-shadow: 1px 1px 1px 1px;
-}
-#moneyValue {
-
 }
 #dealerInfo{
   background-color: lightgrey;
+  display: inline-block;
   position: absolute;
   right: 0;
-  top: -100;
+  top: -80;
+  margin-top: -5;
   margin-left: auto;
   margin-right: auto;
   width: 100px;
   border: 15px black;
   padding: 100px;
-  margin-top: -390px
-  /*box-shadow: 1px 1px 1px 1px;*/
+  box-shadow: 1px 1px 1px 1px;
+    /*box-shadow: 1px 1px 1px 1px;*/
+  }
+.buttonModifier{
+  font-family: 'Spartan', sans-serif;
+  background: blue;
+}
+#playerInfo #moneyValue{
+  padding-right: 500px;
+  font-family: 'Spartan', sans-serif;
+  text-align: left;
+  justify-content: left;
 }

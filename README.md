@@ -9,7 +9,8 @@ Code project 0
 *As a new software engineering immersive student, I wanted to take the concepts that I had learned over the past three weeks and apply them into a project so that I could see what I could build and where I could make improvements.
 
 # How to access the game
-Users can download the game via zip file, or they can get it from the github repo.
+Users can download the game by visiting the KingSri github repository, or they can get it from
+<https://KingSri.github.io/blackJack_game/>
 
 # Purpose and Thought Process:
 
