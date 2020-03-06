@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/main.css"></link>
+
+  <title>BlackJack!</title>
+
+</head>
+
+<body>
+
+  <header>
+  <h1 id = 'title'>BlackJack!</h1>
+  </header>
+
+<main>
+
+  <div id = 'playerInfo'>
+  <br>
+    <h4 id = "moneyValue"></h4>
+    <h5 id = 'playerHand'></h5>
+    <h5 id = 'playerScore'></h5>
+
+    <!-- Button elements -->
+
+    <!-- <div id="buttonElements">
+
+      <div id = 'blackjackbegin'>
+        <button type="button" id = 'beginGame'> Start Game </button>
+
+      </div> -->
+
+      <div id = 'playerBet'>
+        <input type="number" id="button4Betting" min="-1">
+        <button type="button" id = 'betting'> Bet </button>
+      </div>
+
+      <br>
+
+    <!-- stay button -->
+      <div id = "playerStay"></div>
+        <button type = 'button' id = 'stay'>Stay</button>
+  <br>
+
+    <!-- hit button -->
+      <div id = "hitMe"></div>
+        <button type = "button" id = 'hit-me'>Hit Me!</button>
+  <br>
+      <div id = "Resetting"></div>
+        <button type = "button" id = 'reset_button'>Reset</button>
+  </div>
+  </div>
+
+
+
+
+
+
+<!---Splitting between player elements and dealer elements -->
+  <div id = 'dealerInfo'>
+  <br>
+  <h5 id = 'dealerHand'></h5>
+  <h5 id = 'dealerScore'></h5>
+
+  </div>
+
+
+</main>
+<script defer src="JS/main.js"></script>
+</body>
+</html>

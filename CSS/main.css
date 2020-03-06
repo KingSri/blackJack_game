@@ -1,0 +1,51 @@
+body {
+  background-image: url(https://image.freepik.com/free-photo/top-view-wooden-background_23-2148234292.jpg);
+
+  color: black;
+  margin: 0;
+}
+/*header {
+  background-color: black;
+}*/
+header {
+  background-color: black;
+  padding: 5px 10px;
+}
+#title {
+  text-align: center;
+  color: white;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 45px
+}
+#buttonElements{
+  font-family: 'Raleway', sans-serif;
+  /*background-color: #006400;*/
+  margin: auto;
+  text-align:
+}
+
+#playerInfo{
+  /*background-color: lightgrey;*/
+  background-color: green;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  border: 15px black;
+  padding: 100px;
+  margin: 20px;
+  box-shadow: 1px 1px 1px 1px;
+}
+#dealerInfo{
+  background-color: lightgrey;
+  position: absolute;
+  right: 0;
+  top: -100;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  border: 15px black;
+  padding: 100px;
+  margin-top: -390px
+}
