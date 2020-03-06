@@ -32,10 +32,14 @@ document.getElementById('dealerScore').innerHTML = "Dealer's Score: " + dealer.s
 
 
 
-//////
-//deal
-//////
-//
+////////////////////
+//Starting Function
+///////////////////
+
+/*Deck of Cards. deck of cards is an object that holds the functions to start the game. This does so by creating a deck,
+shuffling the deck, dealing the shuffled cards to the player and dealer object.
+*/
+
   const deckOfCards = {
     deck: [],
     cardSuits : ['Diamonds', 'Hearts', 'Spades', 'Clubs'],
@@ -65,6 +69,7 @@ document.getElementById('dealerScore').innerHTML = "Dealer's Score: " + dealer.s
       }
       return this.deck;
     },
+    /* Dealing function. At the end of the function, will deal two cards into each of the player.hand arrays  */
       dealDeck(shuffledDeckArray){
         let cardsInHands = 2;
         let i = 0;
@@ -85,10 +90,9 @@ document.getElementById('dealerScore').innerHTML = "Dealer's Score: " + dealer.s
         console.log(dealer.hand);
       },
 
-  //shuffling
-  //*function derived from Mike Bostock's Fisher-Yates Shuffle function
-  //website:
-//goes through cards array  and randomizes the position of the card at given index
+  /* shuffling function derived from Mike Bostock's Fisher-Yates Shuffle function.
+  website: https://bost.ocks.org/mike/shuffle/
+  goes through cards array  and randomizes the position of the card at given index */
 
     shuffleDeck(array) {
       let c = array.length, a, b;
@@ -181,6 +185,9 @@ function hardReset(){
   currentAmount.innerHTML = "Current Amount: $" + player.money;
 
   document.getElementById('betting').disabled = false;
+  document.getElementById('stay').disabled = false;
+  document.getElementById('hit-me').disabled = false;
+  document.getElementById('reset_button').disabled = false;
 }
 const btn_a = document.querySelector('#reset_button');
 btn_a.addEventListener('click', hardReset);
@@ -198,6 +205,7 @@ function stay(){
     dealerTurn();
   }
   scoreCheck();
+
   winCondition();
 }
 const btn_b = document.querySelector('#stay');
@@ -211,11 +219,15 @@ btn_b.addEventListener('click', stay);
 
 function dealerTurn() {
     dealer.hand.push(deckOfCards.deck[0]);
+    deckOfCards.deck.splice(0,1);
     let dealerTurnScore = dealer.score;
-    dealer.score = dealerTurnScore + dealer.hand[2].NumericValue
+    dealer.score = dealerTurnScore + dealer.hand[dealer.hand.length-1].NumericValue
     document.getElementById('dealerScore').innerHTML = "Dealer's score: " + dealer.score;
-    document.getElementById('dealerHand').innerHTML =  `Dealer Hand: ${dealer.hand[0].CardValue} of ${dealer.hand[0].cardSuit}, ${dealer.hand[1].CardValue} of ${dealer.hand[1].cardSuit},${dealer.hand[2].CardValue} of ${dealer.hand[2].cardSuit} `;
-
+    let output = '';
+    for(i in dealer.hand){
+      output += `${dealer.hand[i].CardValue} of ${dealer.hand[i].cardSuit},`
+    }
+    document.getElementById('dealerHand').innerHTML =  `Dealer Hand: ${output}`;
 }
 //////////////////
 //hit me function
@@ -223,11 +235,16 @@ function dealerTurn() {
 
 function hit_me(event){
   player.hand.push(deckOfCards.deck[0]);
+  deckOfCards.deck.splice(0,1);
   //console.log(player.hand)
   let hitAddScore = player.score;
-  player.score = hitAddScore + player.hand[2].NumericValue;
+  player.score = hitAddScore + player.hand[player.hand.length-1].NumericValue;
   document.getElementById('playerScore').innerHTML = "Your score: " + player.score;
-  document.getElementById('playerHand').innerHTML =  `Player Hand: ${player.hand[0].CardValue} of ${player.hand[0].cardSuit}, ${player.hand[1].CardValue} of ${player.hand[1].cardSuit},${player.hand[2].CardValue} of ${player.hand[2].cardSuit} `;
+  let output = '';
+  for(i in player.hand){
+    output += `${player.hand[i].CardValue} of ${player.hand[i].cardSuit},`
+  }
+  document.getElementById('playerHand').innerHTML =  `Player Hand: ${output}`;
   scoreCheck();
   winCondition();
  }
@@ -251,10 +268,9 @@ conditions for losing
 dealer score, while under 21, is greater than player score
 player score is over 21
 
+If a player wins, they will get back 1/2 of the money that they bet. In the event of a draw, they get a quarter of the money they made.
+If a player loses, they do not get any money back.
 */
-
-// reset button should be the only thing clickable
-//need to grey out bet, stay and hitme!
 
 function winCondition(value){
   let bettingValue = document.getElementById('button4Betting').value;
@@ -297,9 +313,13 @@ function winCondition(value){
     //draw condition, player is returned 1/2 his money
 
   }
-  if (player.money === 0){
+  if (player.money === 0 || player.money < 0){
     //grey out buttons except for reset button
     alert('Game Over! Hit the Reset button to start again.')
+    document.getElementById('betting').disabled = true;
+    document.getElementById('stay').disabled = true;
+    document.getElementById('hit-me').disabled = true;
+    document.getElementById('reset_button').disabled = false;
     //
   }
 }
