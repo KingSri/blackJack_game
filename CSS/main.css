@@ -37,6 +37,9 @@ header {
   margin: 20px;
   box-shadow: 1px 1px 1px 1px;
 }
+#moneyValue {
+
+}
 #dealerInfo{
   background-color: lightgrey;
   position: absolute;
@@ -48,4 +51,5 @@ header {
   border: 15px black;
   padding: 100px;
   margin-top: -390px
+  /*box-shadow: 1px 1px 1px 1px;*/
 }
