@@ -26,8 +26,8 @@ I first started on betting button. I switched from this to an object with functi
 The rules of BlackJack are relatively simple. Below are my modified rules to play this game.
 
 1. Rules:
-    1.The goal of the game is to hit 21 with the cards that you have in your hand. Don't go over, but be careful if you want to add more cards.
-    2. the user will click bet and the game will begin. Player will be dealt cards and dealer will also be dealt cards.
+      1.The goal of the game is to hit 21 with the cards that you have in your hand. Don't go over, but be careful if you want to add more cards.
+      2. the user will click bet and the game will begin. Player will be dealt cards and dealer will also be dealt cards.
 2. Variables:
     1. Money will be stored in the Current Amount Variable, while score will reflect the sum of the held cards in hand.
 3. Winning Conditions:
@@ -36,22 +36,22 @@ The rules of BlackJack are relatively simple. Below are my modified rules to pla
     3. If the dealer goes over 21, the player wins.
     4. Winning will give the player half of their inputted bet back.
 4. Losing Conditions:
-    1.If the player goes over 21, they automatically lose the round
-    2.If the dealer has a hand that is in between 17 and 21, and it is higher than the player's hand, the player loses the round
-    3.If the player's money drops to zero, they lose the game. They have no option but to hit the reset button.
+      1.If the player goes over 21, they automatically lose the round
+      2.If the dealer has a hand that is in between 17 and 21, and it is higher than the player's hand, the player loses the round
+      3.If the player's money drops to zero, they lose the game. They have no option but to hit the reset button.
 5. Draw Condition
     1. If the player and dealer get the same value at the end of the round, they both draw. Player will get a quarter of what they bet.
 6. Player Actions:
   1. User hits bet
-        1.Bet starts the round, dealing two random cards to the player and the dealer hands. The sum of the cards will reflect in player score.
-        2. Bet takes in an integer input and updates the current amount. This reflects how much money the player has left. Player starts with $1000, and if they hit 0 or a negative number, the game is over.    
+          1.Bet starts the round, dealing two random cards to the player and the dealer hands. The sum of the cards will reflect in player score.
+          2. Bet takes in an integer input and updates the current amount. This reflects how much money the player has left. Player starts with $1000, and if they hit 0 or a negative number, the game is over.    
   2. User can hit stay
-        1. Stay will not add any changes to user hand, and will instead play dealer's turn
-        2. Dealer will keep drawing cards till the sum of his cards is between 17 to 21.
-        3. After dealer draws cards, the win condition function will activate and player score will be compared with the dealer score. Whoever matches the conditions (ie. being under 21 but having the higher sum of cards) will win that round.
-  3.User can hit Hit me
+          1. Stay will not add any changes to user hand, and will instead play dealer's turn
+          2. Dealer will keep drawing cards till the sum of his cards is between 17 to 21.
+          3. After dealer draws cards, the win condition function will activate and player score will be compared with the dealer score. Whoever matches the conditions (ie. being under 21 but having the higher sum of cards) will win that round.
+3.User can hit Hit me
         1. hit me will add a card to the player's hand, while also updating their score. It will immediately check that number against the winning conditions
-  4.User hits reset
+4.User hits reset
         1. reset will hard reset the entire board, making all values return to either empty or zero.
         2. This condition is only to be used in the event of losing all your money. Other buttons automatically reset for the next round.
 
